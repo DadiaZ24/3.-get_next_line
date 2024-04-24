@@ -57,10 +57,10 @@ char	*leftovers(char *stash)
 
 char	*get_next_line(int fd)
 {
-	static char	**stash;
+	static char	*stash[OPENF_MAX];
 	char		*new_line;
 
-	if (fd < 0 || BUFFER_SIZE < 0)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	if (!stash[fd])
 		stash[fd] = NULL;

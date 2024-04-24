@@ -12,13 +12,20 @@
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
-//# define BUFFER_SIZE 1
-# define MAX_FD 10000
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
+# ifndef OPENF_MAX
+#  define OPENF_MAX 10000
+# endif
 
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <fcntl.h>
+# include <limits.h>
 
 char	*ft_strchr(char *str, char c);
 char	*ft_strjoin(char *s1, char *s2);
