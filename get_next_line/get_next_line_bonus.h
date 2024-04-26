@@ -18,7 +18,7 @@
 # endif
 
 # ifndef OPENF_MAX
-#  define OPENF_MAX 10000
+#  define OPENF_MAX 1024
 # endif
 
 # include <stdlib.h>
